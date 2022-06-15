@@ -7,12 +7,19 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
-  let dominio = [".com", "cl", "es", "te"];
-  document.querySelector("p").innerHTML =
-    pronoun[0] + adj[0] + noun[0] + dominio[0];
-
-  console.log("Hello Rigo from the console!");
+  var pronoun = ["the", "our"];
+  var adj = ["great", "big"];
+  var noun = ["jogger", "racoon"];
+  var dominio = [".com", ".cl", ".es", ".net", ".org", ".alo", "des"];
+  for (let Rdpr = 0; Rdpr < pronoun.length; Rdpr++) {
+    for (let Rdad = 0; Rdad < adj.length; Rdad++) {
+      for (let Rdnoun = 0; Rdnoun < noun.length; Rdnoun++) {
+        for (let Rddom = 0; Rddom < dominio.length; Rddom++) {
+          console.log(
+            pronoun[Rdpr] + adj[Rdad] + noun[Rdnoun] + " " + dominio[Rddom]
+          );
+        }
+      }
+    }
+  }
 };
